@@ -26,7 +26,7 @@ pipeline {
                             ),
                             sshTransfer(
                                 //exec commands
-                                execCommand: 'sudo docker-compose up -d'
+                                execCommand: 'cd /home/ubuntu/travala/travala-users & sudo docker-compose up -d'
                             )
                         ])
                 ])
