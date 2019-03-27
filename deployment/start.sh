@@ -1,2 +1,2 @@
 cd /home/ubuntu/travala/travala-users
-sudo docker docker-compose up -d
+sudo docker-compose up -d
