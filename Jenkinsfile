@@ -13,19 +13,23 @@ pipeline {
                 sh 'ls'
                 sh 'pwd'
                 sshPublisher(
-                            publishers:[
-                                sshPublisherDesc(configName:'travala_dev_server',verbose:true,transfers:[
-                                    sshTransfer(
-                                        sourceFiles:"authentication/target/users.war",
-                                        remoteDirectory:"travala-users",
-                                        removePrefix:"authentication/target/"
-                                    ),
-                                    sshTransfer(
-                                        //exec commands
-                                        execCommand: 'echo "done build................."'
-                                    )
-                                ])
+                    publishers:[
+                        sshPublisherDesc(configName:'travala_dev_server',verbose:true,transfers:[
+                            sshTransfer(
+                                sourceFiles:"authentication/target/users.war",
+                                remoteDirectory:"travala-users",
+                                removePrefix:"authentication/target/"
+                            ),
+                            sshTransfer(
+                                sourceFiles:"docker-compose.yml",
+                                remoteDirectory:"travala-users"
+                            ),
+                            sshTransfer(
+                                //exec commands
+                                execCommand: 'cd travala-users/& sudo docker-compose up -d'
+                            )
                         ])
+                ])
             }
         }
     }
