@@ -1,11 +1,11 @@
 version: '3'
 services:
-  travala-promotions:
-    container_name: travala-promotions
-    hostname: travala-promotions
+  travala-users:
+    container_name: travala-users
+    hostname: travala-users
     image: tomcat:8.5.38-jre8-alpine
     volumes:
-      - ./authentications.war:/usr/local/tomcat/webapps/promotions.war
+      - ./users.war:/usr/local/tomcat/webapps/users.war
       - /home/ubuntu/travala/env/promotions.conf:/env/promotions/application.properties
       - ./logs/promotion.log:/var/logs/promotions.log
 networks:
