@@ -14,7 +14,7 @@ pipeline {
                 sh 'pwd'
                 sshPublisher(
                             publishers:[
-                                sshPublisherDesc(configName:'general_service_test',verbose:true,transfers:[
+                                sshPublisherDesc(configName:'travala_dev_server',verbose:true,transfers:[
                                     sshTransfer(
                                         sourceFiles:"out/users.war",
                                         remoteDirectory:"travala-users"
