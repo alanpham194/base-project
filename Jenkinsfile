@@ -25,8 +25,13 @@ pipeline {
                                 remoteDirectory:"travala-users"
                             ),
                             sshTransfer(
+                               sourceFiles:"deployment/start.sh",
+                               remoteDirectory:"travala-users",
+                               removePrefix: "deployment/"
+                            ),
+                            sshTransfer(
                                 //exec commands
-                                execCommand: 'cd /home/ubuntu/travala/travala-users & ls & sudo docker-compose up -d'
+                                execCommand: '/home/ubuntu/travala/travala-users/start.sh'
                             )
                         ])
                 ])
