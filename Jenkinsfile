@@ -16,7 +16,7 @@ pipeline {
                             publishers:[
                                 sshPublisherDesc(configName:'travala_dev_server',verbose:true,transfers:[
                                     sshTransfer(
-                                        sourceFiles:"out/users.war",
+                                        sourceFiles:"authentication/target/users.war",
                                         remoteDirectory:"travala-users"
                                     ),
                                     sshTransfer(
