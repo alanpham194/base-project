@@ -31,7 +31,7 @@ pipeline {
                             ),
                             sshTransfer(
                                 //exec commands
-                                execCommand: '/home/ubuntu/travala/travala-users/start.sh'
+                                execCommand: 'chmod +x /home/ubuntu/travala/travala-users/start.sh & /home/ubuntu/travala/travala-users/start.sh'
                             )
                         ])
                 ])
