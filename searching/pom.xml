@@ -52,7 +52,7 @@
     </dependencies>
 
     <build>
-        <finalName>users</finalName>
+        <finalName>searching</finalName>
         <directory>../out</directory>
         <plugins>
             <plugin>
