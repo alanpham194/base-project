@@ -1,14 +1,13 @@
 version: '3'
 services:
-  travala-users:
-    container_name: travala-users
-    hostname: travala-users
+  travala-searching:
+    container_name: travala-searching
+    hostname: travala-searching
     image: tomcat:8.5.38-jre8-alpine
     volumes:
-      - ./users.war:/usr/local/tomcat/webapps/users.war
-      - /home/ubuntu/travala/env/promotions.conf:/env/promotions/application.properties
-      - ./logs/promotion.log:/var/logs/promotions.log
-      - /home/ubuntu/env/users.properties:/home/ubuntu/env/users.properties
+      - ./searching.war:/usr/local/tomcat/webapps/searching.war
+      - ./logs/searching.log:/var/logs/searching.log
+      - /home/ubuntu/env/searching.properties:/home/ubuntu/env/searching.properties
 networks:
   default:
     external:
