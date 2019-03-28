@@ -17,7 +17,7 @@ pipeline {
                         sshPublisherDesc(configName:'travala_dev_server',verbose:true,transfers:[
                             sshTransfer(
                                 sourceFiles:"searching/target/searching.war",
-                                remoteDirectory:"travala-users",
+                                remoteDirectory:"travala-searching",
                                 removePrefix:"searching/target/"
                             ),
                             sshTransfer(
@@ -31,7 +31,7 @@ pipeline {
                             ),
                             sshTransfer(
                                 //exec commands
-                                execCommand: 'chmod +x /home/ubuntu/travala/travala-users/start.sh & /home/ubuntu/travala/travala-users/start.sh'
+                                execCommand: 'chmod +x /home/ubuntu/travala/travala-searching/start.sh & /home/ubuntu/travala/travala-searching/start.sh'
                             )
                         ])
                 ])
