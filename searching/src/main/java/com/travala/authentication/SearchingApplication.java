@@ -6,10 +6,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
 @SpringBootApplication
-@PropertySources({
-        @PropertySource("file:/home/ubuntu/env/searching.properties")
+//@PropertySources({
+//        @PropertySource("file:/home/ubuntu/env/searching.properties")
 //    @PropertySource("file:C:\\Users\\Admin\\Desktop\\env\\promotions\\application.properties")
-})
+//})
 public class SearchingApplication {
 
     public static void main(String[] args) {
