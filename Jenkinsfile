@@ -16,17 +16,17 @@ pipeline {
                     publishers:[
                         sshPublisherDesc(configName:'travala_dev_server',verbose:true,transfers:[
                             sshTransfer(
-                                sourceFiles:"authentication/target/users.war",
+                                sourceFiles:"searching/target/searching.war",
                                 remoteDirectory:"travala-users",
-                                removePrefix:"authentication/target/"
+                                removePrefix:"searching/target/"
                             ),
                             sshTransfer(
                                 sourceFiles:"docker-compose.yml",
-                                remoteDirectory:"travala-users"
+                                remoteDirectory:"travala-searching"
                             ),
                             sshTransfer(
                                sourceFiles:"deployment/start.sh",
-                               remoteDirectory:"travala-users",
+                               remoteDirectory:"travala-searching",
                                removePrefix: "deployment/"
                             ),
                             sshTransfer(
