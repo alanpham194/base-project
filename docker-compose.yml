@@ -8,6 +8,7 @@ services:
       - ./users.war:/usr/local/tomcat/webapps/users.war
       - /home/ubuntu/travala/env/promotions.conf:/env/promotions/application.properties
       - ./logs/promotion.log:/var/logs/promotions.log
+      - /home/ubuntu/env/users.properties:/home/ubuntu/env/users.properties
 networks:
   default:
     external:
