@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package commons.client.request;
+package com.travala.authentication.client.request;
 
 /**
  *
  * @author Admin
  */
-public class LockAVA {
+public class UnLockAVA {
 
     private String id;
     private String user_id;
@@ -17,7 +17,7 @@ public class LockAVA {
     private String block_currency;
     private String block_reason;
 
-    public LockAVA(String id, String user_id, String block_amount, String block_currency, String block_reason) {
+    public UnLockAVA(String id, String user_id, String block_amount, String block_currency, String block_reason) {
         this.id = id;
         this.user_id = user_id;
         this.block_amount = block_amount;

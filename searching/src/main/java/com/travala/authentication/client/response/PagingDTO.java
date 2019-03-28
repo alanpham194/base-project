@@ -1,4 +1,4 @@
-package commons.client.response;
+package com.travala.authentication.client.response;
 
 public class PagingDTO {
     private int page;

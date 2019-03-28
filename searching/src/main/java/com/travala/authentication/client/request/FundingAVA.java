@@ -1,4 +1,4 @@
-package commons.client.request;
+package com.travala.authentication.client.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.StringUtils;

@@ -1,4 +1,4 @@
-package commons.client;
+package com.travala.authentication.client;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,9 +19,8 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.logging.LogManager;
 
-@Component
+@Component("clientHelper")
 public class ClientHelper {
 
     private static final Logger logger = LoggerFactory.getLogger(ClientHelper.class);

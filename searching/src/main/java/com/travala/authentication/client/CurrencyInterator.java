@@ -1,4 +1,4 @@
-package commons.client;
+package com.travala.authentication.client;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

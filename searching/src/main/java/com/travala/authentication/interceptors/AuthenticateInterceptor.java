@@ -1,11 +1,12 @@
 package com.travala.authentication.interceptors;
 
+import com.travala.authentication.client.AuthenHelper;
 import com.travala.authentication.exceptions.AuthenticateException;
-import commons.client.AuthenHelper;
 import commons.dto.UserDTO;
 import commons.utils.Messages;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -19,6 +20,7 @@ public class AuthenticateInterceptor implements HandlerInterceptor {
 
     private Logger logger = Logger.getLogger(AuthenticateInterceptor.class);
     @Autowired
+    @Qualifier("authenHelper")
     private AuthenHelper authenHelper;
     @Value("${API_KEY}")
     private String apiKey;
