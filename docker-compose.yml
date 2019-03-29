@@ -1,13 +1,13 @@
 version: '3'
 services:
-  travala-searching:
-    container_name: travala-searching
-    hostname: travala-searching
+  travala-orders:
+    container_name: travala-orders
+    hostname: travala-orders
     image: tomcat:8.5.38-jre8-alpine
     volumes:
-      - ./searching.war:/usr/local/tomcat/webapps/searching.war
-      - ./logs/searching.log:/var/logs/searching.log
-      - /home/ubuntu/env/searching.properties:/home/ubuntu/env/searching.properties
+      - ./searching.war:/usr/local/tomcat/webapps/orders.war
+      - ./logs/searching.log:/var/logs/orders.log
+      - /home/ubuntu/env/orders.properties:/home/ubuntu/env/orders.properties
 networks:
   default:
     external:
