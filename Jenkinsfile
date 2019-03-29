@@ -16,22 +16,22 @@ pipeline {
                     publishers:[
                         sshPublisherDesc(configName:'travala_dev_server',verbose:true,transfers:[
                             sshTransfer(
-                                sourceFiles:"searching/target/searching.war",
-                                remoteDirectory:"travala-searching",
-                                removePrefix:"searching/target/"
+                                sourceFiles:"orders/target/orders.war",
+                                remoteDirectory:"travala-orders",
+                                removePrefix:"orders/target/"
                             ),
                             sshTransfer(
                                 sourceFiles:"docker-compose.yml",
-                                remoteDirectory:"travala-searching"
+                                remoteDirectory:"travala-orders"
                             ),
                             sshTransfer(
                                sourceFiles:"deployment/start.sh",
-                               remoteDirectory:"travala-searching",
+                               remoteDirectory:"travala-orders",
                                removePrefix: "deployment/"
                             ),
                             sshTransfer(
                                 //exec commands
-                                execCommand: 'chmod +x /home/ubuntu/travala/travala-searching/start.sh & /home/ubuntu/travala/travala-searching/start.sh'
+                                execCommand: 'chmod +x /home/ubuntu/travala/travala-orders/start.sh & /home/ubuntu/travala/travala-orders/start.sh'
                             )
                         ])
                 ])

@@ -7,13 +7,13 @@ import org.springframework.context.annotation.PropertySources;
 
 @SpringBootApplication
 @PropertySources({
-        @PropertySource("file:/home/ubuntu/env/searching.properties")
+        @PropertySource("file:/home/ubuntu/env/orders.properties")
 //    @PropertySource("file:C:\\Users\\Admin\\Desktop\\env\\promotions\\application.properties")
 })
-public class SearchingApplication {
+public class OrdersApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SearchingApplication.class, args);
+        SpringApplication.run(OrdersApplication.class, args);
     }
 
 }

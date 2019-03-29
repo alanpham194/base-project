@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>commons</module>
-        <module>searching</module>
+        <module>orders</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -13,10 +13,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.travala</groupId>
-    <artifactId>travala-search</artifactId>
+    <artifactId>travala-orders</artifactId>
     <version>0.0.1</version>
     <packaging>pom</packaging>
-    <name>travala-search</name>
+    <name>travala-orders</name>
     <description>Travala Searching</description>
 
 </project>
